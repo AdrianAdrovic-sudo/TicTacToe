@@ -11,10 +11,9 @@
     "preview": "vite preview",
     "electron": "electron .",
     "start": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
-    "package": "vite build && electron-builder build --win"
+    "package": "set CSC_IDENTITY_AUTO_DISCOVERY=false && vite build && electron-builder build --win"
   },
   "dependencies": {
-    "electron-is-dev": "^3.0.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   },
@@ -37,6 +36,8 @@
     "appId": "com.yourname.tictactoe",
     "productName": "TicTacToe",
     "icon": "assets/TTT.ico",
+    "forceCodeSigning": false,
+    "asar": false,
     "win": {
       "target": "nsis",
       "icon": "assets/TTT.ico"

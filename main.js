@@ -1,6 +1,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
-const isDev = require('electron-is-dev')
+
+const isDev = !app.isPackaged
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -23,9 +24,6 @@ function createWindow() {
     win.webContents.openDevTools()
   } else {
     win.loadFile(path.join(__dirname, 'dist/index.html'))
-    win.webContents.on('did-finish-load', () => {
-      win.webContents.closeDevTools()
-    })
   }
 }
 
