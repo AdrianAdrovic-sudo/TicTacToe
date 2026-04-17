@@ -1,16 +1,52 @@
-# React + Vite
+# TicTacToe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A desktop Tic Tac Toe game built with Electron and React.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Player vs Player** — two players on the same machine
+- **Player vs Bot** — three difficulty levels
+  - Easy — random moves
+  - Normal — mixed strategy
+  - Impossible — unbeatable Minimax algorithm
+- **Themes** — four color themes (Dark, Light, Forest, Ocean)
+- **Scoreboard** — tracks wins and draws across rounds
+- **Installable** — packaged as a Windows executable
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [Electron](https://www.electronjs.org/) — desktop shell
+- [React](https://react.dev/) — UI framework
+- [Vite](https://vitejs.dev/) — build tool
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js v18 or higher
+- npm
+
+### Install and run
+
+```bash
+git clone https://github.com/AdrianAdrovic-sudo/TicTacToe.git
+cd TicTacToe
+npm install
+npm run start
+```
+
+### Build installer
+
+```bash
+npm run package
+```
+
+The installer will be output to the `release` folder.
+
+## AI — Minimax Algorithm
+
+The Impossible difficulty uses the Minimax algorithm, a decision tree search that evaluates every possible game state and always plays the optimal move. It cannot be beaten, only drawn.
+
+## License
+
+MIT
