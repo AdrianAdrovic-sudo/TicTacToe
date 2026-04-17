@@ -1,0 +1,124 @@
+.game-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: var(--bg-primary);
+  padding: 1.5rem;
+}
+
+.game-header {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game-back-btn {
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.game-back-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.game-mode-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05rem;
+}
+
+.scoreboard {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.score-item {
+  flex: 1;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.score-item.draws {
+  border-color: var(--text-secondary);
+}
+
+.score-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05rem;
+}
+
+.score-label.x-label {
+  color: var(--x-color);
+}
+
+.score-label.o-label {
+  color: var(--o-color);
+}
+
+.score-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.status-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.05rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.status-text.finished {
+  color: var(--win-highlight);
+  font-size: 1.4rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.game-btn {
+  padding: 0.85rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  letter-spacing: 0.05rem;
+}
+
+.game-btn.play-again {
+  background-color: var(--accent);
+  color: var(--text-primary);
+}
+
+.game-btn.play-again:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}

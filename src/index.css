@@ -1,0 +1,41 @@
+:root {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-cell: #0f3460;
+  --accent: #e94560;
+  --accent-hover: #c73652;
+  --text-primary: #eaeaea;
+  --text-secondary: #a8a8b3;
+  --border-color: #e94560;
+  --x-color: #e94560;
+  --o-color: #4fc3f7;
+  --win-highlight: #f0c040;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}

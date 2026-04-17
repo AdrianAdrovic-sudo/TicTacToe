@@ -1,0 +1,120 @@
+.settings-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-primary);
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem;
+}
+
+.settings-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+.settings-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.settings-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.settings-section-title {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.theme-card {
+  position: relative;
+  height: 100px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.theme-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.theme-card.active {
+  border-color: white;
+  transform: translateY(-3px);
+}
+
+.theme-accent-bar {
+  width: 60%;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.theme-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+.theme-check {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.settings-footer {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.settings-btn.back {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.settings-btn.back:hover {
+  background-color: var(--bg-cell);
+  transform: translateY(-2px);
+}
