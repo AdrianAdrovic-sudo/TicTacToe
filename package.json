@@ -36,10 +36,10 @@
   "build": {
     "appId": "com.yourname.tictactoe",
     "productName": "TicTacToe",
-    "icon": "assets/icon.ico",
+    "icon": "assets/TTT.ico",
     "win": {
       "target": "nsis",
-      "icon": "assets/icon.ico"
+      "icon": "assets/TTT.ico"
     },
     "nsis": {
       "oneClick": false,
